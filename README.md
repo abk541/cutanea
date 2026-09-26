@@ -7,6 +7,16 @@ npm install
 npm run dev   # http://localhost:3000
 ```
 
+## Déploiement (GitHub Pages)
+
+En ligne : https://abk541.github.io/cutanea/ — servi depuis la branche `gh-pages` (export statique dans `out/`).
+
+```powershell
+$env:NEXT_PUBLIC_BASE_PATH = "/cutanea"; npm run build; Remove-Item Env:NEXT_PUBLIC_BASE_PATH
+cd out; git init -b gh-pages; git add -A; git commit -m "deploy"
+git push -f https://github.com/abk541/cutanea.git gh-pages; cd ..
+```
+
 ## Remplacer les placeholders
 
 - **Logo** → `public/logo.png`. Tant que le fichier est absent, un logotype typographique s'affiche. Un logo sur fond blanc fonctionne aussi (fusion `multiply`).
