@@ -10,7 +10,8 @@ export const metadata: Metadata = {
   description: "Écran solaire SPF 50+, crème hydratante, mousse éclat boost, syndet et gel moussant : les soins dermo-cosmétiques Cutanéa, disponibles au Maroc.",
 };
 
-export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover", themeColor: "#FAF6F1" };
+// "only light" stops browsers from auto-darkening the page (which breaks the white packshot blending)
+export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover", themeColor: "#FAF6F1", colorScheme: "only light" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
